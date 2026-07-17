@@ -3,15 +3,20 @@
     <head>
         <meta charset="utf-8"/>
         <title>BinToDec</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+        <link rel="stylesheet" href="./styles/reset.css"/>
         <link rel="stylesheet" href="./styles/styles.css"/>
         <script src="./scripts/index.js" defer></script>
     </head>
     <body>
         <main>
-            <form action="#" method="POST">
-                <label for="binary">Enter 8 binary digits:</label>
-                <input type="number" maxlength="8" min="0" max="11111111" required />
-                <output name="decimal" for="number"></output>
+            <h1>Binary To Decimal Converter</h1>
+            <p>Convert a 1-8 bit binary number into decimal.</p>
+            <form>
+                <label for="binary">Enter a binary number:</label>
+                <input id="binary" type="text" pattern="[01]+" minlength="1" maxlength="8" required />
+                <p>Decimal: <output name="decimal" for="binary"></output></p>
+                <button type="submit">Convert</button>
             </form>
         </main>
     </body>
